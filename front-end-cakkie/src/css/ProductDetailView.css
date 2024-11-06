@@ -1,0 +1,82 @@
+.product-detail-view {
+  padding: 20px;
+  width: calc(100vw - 250px);
+  height: 100vh; /* Full height of the viewport */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column; /* Ensure content is in a column layout */
+}
+.product-detail-view h2{
+  color: orange;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.product-detail-table {
+  width: 100%;
+  flex-grow: 1; /* Allow table to take available space */
+  overflow: hidden; /* Prevent the table from causing scrollbars */
+  border-collapse: collapse;
+}
+
+.product-detail-table th,
+.product-detail-table td {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.product-detail-table th {
+  background-color: #f4c542;
+  font-size: 15px;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  padding: 5px 0;
+  background-color: #f9f9f9; /* Giữ lại phần nền để cách biệt phân trang */
+}
+
+.pagination-controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 2px solid black; /* Thêm đường viền màu đen */
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #ddd; /* Thêm hiệu ứng hover */
+  color: black;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.view-detail-link {
+  color: orange;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+}

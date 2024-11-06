@@ -1,0 +1,168 @@
+/* General Sidebar Layout */
+.sidebar__wrap {
+    width: 250px;
+    height: 100vh;
+    background-color: #e1c16e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    overflow-y: auto; /* Allow vertical scrolling if sidebar content exceeds height */
+  }
+  
+  .sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar__head {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sidebar__head img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .sidebar__body {
+    flex-grow: 1;
+    padding: 18px;
+  }
+  
+  .title__main {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: left;
+    margin: 20px 0 30px 0;
+  }
+  
+  /* Sidebar Content */
+  .sidebar__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar__link {
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  .menu__list {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #e1c16e; /* Default background color */
+    color: black;
+    border-radius: 0; /* Remove any border-radius to make it appear flat */
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border: none; /* Ensure no visible border */
+  }
+  
+  .menu__list:hover {
+    background-color: white; /* Change to white on hover */
+    color: black;
+  }
+  
+  .menu__list.active {
+    background-color: white; /* Highlight color when active */
+    color: black;
+    font-weight: bold;
+  }
+  
+  .icon__down {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    color: #000000;
+  }
+  
+  /* Rotate the arrow when the menu is open */
+  .rotate {
+    transform: rotate(180deg);
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .list__icon {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Submenu Styling */
+  .list__subitems {
+    padding-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.2s;
+    max-height: 200px; /* Set a max height for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling if subitems exceed max height */
+  }
+  
+  .item__cate {
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin-bottom: 0px;
+    border: none;
+  }
+  
+  .item__cate:hover {
+    background-color: white; /* White background on hover */
+    color: black;
+    border-radius: 0; /* Ensure it remains flat without rounded edges */
+  }
+  
+  /* Sidebar Footer */
+  .sidebar__footer {
+    padding: 18px;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .sidebar__footer a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer__list {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .footer__list .footer__icon {
+    font-size: 35px;
+    margin-right: 15px;
+  }
+  
+  .footer__list .footer__title {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .footer__list:hover {
+    background-color: #4A3B2C;
+    color: #ffffff;
+    transition: all ease-in-out 0.2s;
+    border-radius: 10px;
+  }
+  
+  .footer__title:hover {
+    color: #ffffff;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .footer__title {
+    padding: 20px 30px 20px 0px;
+    width: 100%;
+  }
+  

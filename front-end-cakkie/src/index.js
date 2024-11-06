@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style/index.css';
+import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-// Create root element for React
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// Render the App component
-root.render(
-    <App />
-);
-
-// Performance measurement
-reportWebVitals(); // You can pass a function like reportWebVitals(console.log) if you want to log metrics
+const rootElement = document.getElementById('root'); // Đảm bảo phần tử này tồn tại
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} else {
+  console.error("Root element not found");
+}

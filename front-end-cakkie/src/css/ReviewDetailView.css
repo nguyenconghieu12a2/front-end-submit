@@ -1,0 +1,163 @@
+/* Main Review Detail View styling */
+.review-detail-view {
+    padding: 20px;
+    width: calc(100vw - 250px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.review-detail-view h2 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Comment grid layout: 2 columns per row and up to 2 rows */
+.comment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    grid-auto-rows: auto;
+    margin-bottom: 10px;
+}
+
+/* Comment card styling */
+.compact-comment-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Đảm bảo có khoảng cách giữa các thẻ bình luận */
+    height: 100%; /* Đảm bảo mỗi thẻ chiếm toàn bộ chiều cao */
+}
+
+.comment-details {
+    flex-direction: column;
+    font-size: 16px;
+    margin-bottom: 10px; /* Add space between comment content and buttons */
+}
+
+.comment-details p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Divider between comments */
+.comment-divider {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Action buttons for log or other actions */
+.action-buttons {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column; /* Sắp xếp các nút theo chiều dọc */
+    justify-content: flex-start;
+    gap: 10px; /* Tạo khoảng cách giữa các nút */
+    align-items: flex-start; /* Căn ngang các nút theo chi tiết bình luận */
+}
+/* Style for action buttons */
+.action-buttons button {
+    width: 100px; /* Cố định chiều rộng cho các nút */
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.action-buttons .approve-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.action-buttons .reject-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-buttons .toxic-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.action-buttons .recover-button {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Hover effects for buttons */
+.action-buttons button:hover {
+    opacity: 0.9;
+}
+
+.log-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.log-button:hover {
+    background-color: darkred;
+}
+
+/* Flexbox for aligning Log button and user name horizontally */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Pagination styling */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-controls button {
+    background-color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    padding: 8px 12px;
+}

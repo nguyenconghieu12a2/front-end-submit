@@ -1,0 +1,65 @@
+/* Ensure no scrolling on the entire page */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling on the body */
+}
+
+/* Review management view container */
+.review-management-view {
+  max-height: 100%; /* Full height of the viewport */
+  max-width: 100%;
+  width: calc(100vw - 250px); /* Full width minus sidebar */
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent scrolling in content */
+}
+
+/* Table - ensure it does not cause overflow */
+.review-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.review-management-table th,
+.review-management-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.review-management-table th {
+  background-color: #E1C16E;
+}
+
+/* Button styles */
+button.approve, button.reject, button.pending, button.toxic {
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+button.approve { background-color: #28a745; }
+button.reject { background-color: #dc3545; }
+button.pending { background-color: #17a2b8; }
+button.toxic { background-color: #6c757d; }
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Additional Flexbox rules to prevent overflow */
+.review-management-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden; /* Ensures no scrollbar appears */
+}
